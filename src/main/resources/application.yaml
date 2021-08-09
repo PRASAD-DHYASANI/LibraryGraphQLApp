@@ -1,0 +1,22 @@
+graphql:
+  servlet:
+    mapping: /graphql
+    enabled: true
+    corsEnabled: true
+
+spring:
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: library
+
+
+logging:
+  level:
+    org:
+      springframework:
+        data:
+          mongodb:
+            core:
+              MongoTemplate : DEBUG

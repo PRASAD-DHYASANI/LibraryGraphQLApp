@@ -1,0 +1,28 @@
+
+type Book {
+    isbn :  String
+    name : String
+    author : String
+}
+
+input BookInput {
+    isbn :  String !
+    name : String
+    author : String
+}
+
+type Query {
+    getAllBooks : [Book]
+    getBook(id: ID!) : Book
+}
+
+type Mutation {
+    addBook(book: BookInput) : Book!
+    deleteBook(id: ID!) : Boolean
+}
+
+
+schema {
+    query: Query
+    mutation: Mutation
+}
